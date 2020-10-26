@@ -1,0 +1,331 @@
+body {
+    background: url("../img/background2.jpg");
+    background-size: cover;
+}
+
+/* navbar */
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar img {
+    width: 150px;
+    padding: 0;
+}
+
+.navbar-nav li a {
+    float: right;
+    text-align: right;
+    font-weight: 600;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+/* banner */
+#banner {
+    padding-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+#banner .banner-info img {
+    position: relative;
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    opacity: 0.6;
+}
+#banner .info {
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+#banner .info h4 {
+    font-size: 3vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Sansita Swashed", cursive;
+}
+
+#banner .info a {
+    font-size: 1vw;
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+#banner .info a:hover {
+    font-size: 1vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* container */
+#container {
+    padding-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#container h1 {
+    color: #4c4c4c;
+    font-family: "Sansita Swashed", cursive;
+    margin-bottom: 30px;
+}
+
+#container .item img:hover {
+    opacity: 0.3;
+}
+
+.middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.item:hover .image {
+    opacity: 0.3;
+}
+
+.item:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #4c4c4c;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 10px 16px;
+}
+#container .item a {
+    text-decoration: none;
+    color: black;
+}
+
+/* about */
+#about {
+    padding-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#about h1 {
+    color: #4c4c4c;
+    font-family: "Sansita Swashed", cursive;
+    margin-bottom: 30px;
+}
+
+#about p {
+    color: white;
+}
+.yt-video {
+    width: 100%;
+}
+
+/* footer */
+#footer {
+    bottom: 0;
+    padding-top: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#footer .text-follow {
+    color: #4c4c4c;
+    font-size: 20px;
+    font-family: "Sansita Swashed", cursive;
+    text-align: center;
+}
+
+#footer .text-subs {
+    color: #4c4c4c;
+    font-size: 20px;
+    font-family: "Sansita Swashed", cursive;
+}
+
+#footer .social-icons a {
+    text-align: center;
+}
+
+.social-icons a:hover img {
+    transform: translateY(-10px);
+}
+
+#footer .social-icons {
+    text-align: center;
+}
+#footer .form-group {
+    margin-left: 30px;
+}
+
+#footer .btn {
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+}
+
+/* list */
+
+#list {
+    padding-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#list h1 {
+    color: #4c4c4c;
+    font-family: "Sansita Swashed", cursive;
+    margin-bottom: 30px;
+}
+
+.search {
+    background-color: transparent !important;
+    border-color: gray;
+    margin-top: 5px;
+}
+
+#list .list-item {
+    float: left;
+    margin-right: 20px;
+}
+
+#list .list-item img {
+    max-width: 100%;
+    width: 100px;
+    margin-top: 5px;
+}
+
+#list .list-item img:hover {
+    opacity: 0.3;
+}
+
+.middle-list {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 50px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.list-item:hover .image-list {
+    opacity: 0.3;
+}
+.list-item:hover .middle-list {
+    opacity: 1;
+}
+.text-list {
+    background-color: #4c4c4c;
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    padding: 8px 16px;
+}
+
+.list-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.paginate {
+    padding-top: 30px;
+    float: right;
+}
+
+/* detail */
+
+#detail h1 {
+    color: #4c4c4c;
+    font-family: "Sansita Swashed", cursive;
+    margin-bottom: 30px;
+}
+
+#detail .video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+#detail .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid;
+}
+
+table {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.detail-info tr th {
+    border: 1px solid;
+    text-align: left;
+    padding: 8px;
+    color: #7c7b7b;
+}
+
+.sinopsis h1 {
+    color: #4c4c4c;
+    font-family: "Sansita Swashed", cursive;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.sinopsis p {
+    color: #7c7b7b;
+}
+
+.genre p {
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 5px;
+    padding: 5px;
+    background-color: black;
+    border-radius: 15px;
+    font-size: 10px;
+}
+
+/* fb comment */
+
+#commnet {
+    margin-top: 50px;
+}
+
+#commnet h1 {
+    color: #4c4c4c;
+    font-family: "Sansita Swashed", cursive;
+    margin-bottom: 30px;
+}
+
+.fb-background-color {
+    background: #999999 !important;
+}
