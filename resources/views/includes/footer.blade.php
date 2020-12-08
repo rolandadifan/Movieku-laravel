@@ -14,10 +14,16 @@
             </div>
             <div class="col-md-6">
                 <p class="text-subs">Subscribe</p>
-                <form action="#" class="subscribe">
+                <form action="{{url('/subscribe')}}" method="post" class="subscribe">
+                    @csrf
                     <div class="row">
                         <div class="form-group">
-                            <input type="text" class="form-control mr-5" name="subscribe" value="Your Email">
+                            <input type="email" class="form-control mr-5 ipt-email" name="subscriber" placeholder="Your Email">
+                            @error('subscriber')
+                            <div class="invalid-tooltip">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-secondary ml-3">Submit</button>
                     </div>
@@ -39,7 +45,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
 <script src="{{asset('assets/js/smooth-scroll.js')}}"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
-
+<script>
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
+</script>
 
 </body>
 

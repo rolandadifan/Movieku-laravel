@@ -81,6 +81,48 @@
                     </table>
                 </div>
             </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-secondary btn-sm mt-4 mx-5" data-toggle="modal" data-target="#exampleModal">
+                Report
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Report Masalah</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{route('report.post')}}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="film">Judul Film</label>
+                                    <input type="text" class="form-control" id="filmreport" value="{{$movie->judul}}" disabled>
+                                    <input type="hidden" class="form-control" id="filmreport" name="film" value="{{$movie->judul}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pesanreport">Pesan</label>
+                                    <input type="text" class="form-control" id="pesanreport" name="pesan" maxlength="30">
+                                    <small id="emailHelp" class="form-text text-muted">Contoh</small>
+                                    <small id="emailHelp" class="form-text text-muted">video error, video tidak dapat diputar</small>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Kirim</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- endmodal -->
+
             <div class="sinopsis">
                 <h1>Sinopsis</h1>
                 <p>{{$movie->sinopsis}}</p>

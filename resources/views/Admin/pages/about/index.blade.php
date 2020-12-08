@@ -1,6 +1,7 @@
 @extends('Admin.layouts.app')
 @section('tittle' , 'About')
 @section('content')
+@include('sweetalert::alert')
 
 
 <div class="page-breadcrumb">
@@ -26,7 +27,7 @@
     </div>
     @endif
 
-    <form action="{{route('about.update', $about->id)}}" method="POST">
+    <form action="{{url('/setting/update/', $about->id)}}" method="POST">
         @method('put')
         @csrf
         <div class="form-group">

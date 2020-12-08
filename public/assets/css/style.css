@@ -329,3 +329,36 @@ table {
 .fb-background-color {
     background: #999999 !important;
 }
+
+.login-admin {
+    margin-top: 150px;
+    background-color: #5388c5;
+}
+
+.login-admin p {
+    text-align: center;
+}
+
+.log-input {
+    border-radius: 20px;
+    background-color: #b2cae5;
+    border: none;
+}
+
+.log-input:hover {
+    background-color: #b2cae5;
+}
+
+.btn-log {
+    background-color: #19314c;
+    border-radius: 20px;
+}
+
+.btn-log:hover {
+    background-color: #336298;
+}
+
+.ipt-email {
+    background-color: transparent;
+    border-radius: 20px;
+}

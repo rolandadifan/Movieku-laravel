@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Report;
 use Illuminate\Http\Request;
-use App\Models\About;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class AboutController extends Controller
+class ReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $about = About::find(1);
-        return view('Admin.pages.about.index')->with([
-            'about' => $about
+        $reports = Report::orderBy('created_at', 'desc')->get();
+        return view('Admin.pages.report.index')->with([
+            'reports' => $reports
         ]);
     }
 
@@ -39,16 +39,20 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data = Report::create($data);
+
+        Alert::success('Berhasil', 'Pesan Akan Kami Proses');
+        return redirect()->route('home');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Report $report)
     {
         //
     }
@@ -56,10 +60,10 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Report $report)
     {
         //
     }
@@ -68,27 +72,26 @@ class AboutController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Report $report)
     {
-        $data = $request->all();
-        $about = About::findOrFail($id);
-
-        $about->update($data);
-        Alert::success('Berhasil', 'Berhasil Diubah');
-        return redirect()->back()->with('success', 'Berhasil Di Ubah');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $data = Report::findOrFail($id);
+        $data->delete();
+
+        Alert::success('Berhasil', 'Pesan Dihapus');
+        return redirect()->route('report.index');
     }
 }

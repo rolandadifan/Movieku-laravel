@@ -28,6 +28,7 @@
     <table id="myTable" class="table display" width="100%">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Judul</th>
                 <th>Poster</th>
                 <th>Negara</th>
@@ -40,6 +41,7 @@
         <tbody>
             @foreach($movies as $movie)
             <tr>
+                <td>{{$loop->iteration}}</td>
                 <td>{{$movie->judul}}</td>
                 <td>
                     <img width="50px" src="{{url($movie->poster)}}" alt="">

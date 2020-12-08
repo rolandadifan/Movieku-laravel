@@ -46,6 +46,7 @@ class MovieController extends Controller
      */
     public function store(MovieRequest $request)
     {
+
         $data = $request->all();
         $data['poster'] = $request->file('poster')->store(
             'assets/poster',
